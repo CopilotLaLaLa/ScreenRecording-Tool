@@ -1,5 +1,6 @@
 import ScreenRecord from "./js/screen-record";
 import {recordStart,recordEnd} from "./js/btn-func";
+import "./css/index.css";
 
 
 let videoDom = document.getElementById("video");//视频dom

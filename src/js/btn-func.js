@@ -1,4 +1,4 @@
-let videoDom = document.getElementById("video");//视频dom
+// let videoDom = document.getElementById("video");//视频dom
 
 let recordBtn = document.getElementById("record-btn");//开始录制按钮dom
 let endBtn = document.getElementById("end-btn");//结束录制按钮dom
@@ -18,7 +18,9 @@ let btnBarStr = ".btn-bar";
 function clearAllBtn(ident){
     let btnBar = document.querySelector(ident).childNodes;
     for(let domItem of btnBar) {
-        if(domItem.nodeType == 1)domItem.classList.remove('showBtn');
+        if(domItem.nodeType == 1){
+            domItem.classList.remove('showBtn');
+        }  
     }
 }
 

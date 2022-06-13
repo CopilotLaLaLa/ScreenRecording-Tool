@@ -1,5 +1,4 @@
 import countDownTimer from "./count-down-class";//导入倒计时器
-
 export default class ScreenRecord {
     constructor(videoDom,startFn,endFn) {
         this.startFn = startFn;//录制开始回调

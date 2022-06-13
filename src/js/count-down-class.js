@@ -37,7 +37,7 @@ export default class countDownTimer {
     async countDown(milisecond){
         this.domShow(milisecond);
         // this.sta = 1;
-        return new Promise((resolve,reject)=>{
+        return new Promise((resolve)=>{
             this.counter = setInterval(()=>{
                     milisecond -= 1;
                     if(milisecond == 0){
