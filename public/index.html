@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>录屏</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #eee;
+		}
+		#video{
+			width: 1280px;
+			height: 580px;
+		}
+		.wrapper{
+			position: relative;
+			width: 1280px;
+			height: 640px;
+			background-color: white;
+			border-radius: 10px 10px 40px 40px;
+		}
+		.btn-bar{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			overflow: hidden;
+			border-radius: 0 0 30px 30px;
+		}
+		.btn{
+			flex: 1;
+			display: none;
+			outline: none;
+			border: none;
+			height: 60px;
+			line-height: 60px;
+			font-size: 24px;
+			font-weight: 700;
+			color: white;
+			text-align: center;
+		}
+		.showBtn{
+			display: block;
+		}
+		#record-btn{
+			background-color: blue;
+		}
+		#clear-btn{
+			background-color: red;
+		}
+		#download-btn{
+			background-color: green;
+		}
+		#recording-sta{
+			background-color: orange;
+		}
+		#pause-sta{
+			background-color: lightskyblue;
+		}
+		#pause-btn{
+			background-color: burlywood;
+		}
+		#resume-btn{
+			background-color: chocolate;
+		}
+		#end-btn{
+			background-color: dodgerblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<video preload="auto" id="video"></video>
+		<div class="btn-bar">
+			<button class="btn showBtn" id="record-btn">开始录屏</button>
+
+			<button class="btn" id="pause-btn">暂停</button>
+			<button class="btn" id="resume-btn">继续</button>
+
+			<div class="btn" id="recording-sta">正在录制</div>
+			<div class="btn" id="pause-sta">录制暂停</div>
+
+			<button class="btn" id="end-btn">结束</button>
+
+			<button class="btn" id="clear-btn">清除录制</button>
+			<button class="btn" id="download-btn">下载视频</button>
+		</div>
+	</div>
+</body>
+<!-- <script type="text/javascript" src="/bundle.js"></script> -->
+</html>
