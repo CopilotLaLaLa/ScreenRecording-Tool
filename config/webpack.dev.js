@@ -4,17 +4,19 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     //入口
-    entry: "./src/main.js",
+    entry: "./src/main.js",//相对路径
     //输出
     output: {
-        //所有文件输出路径
+         //所有文件输出路径
         //__dirname nodejs的变量，代表当前文件的文件夹目录
-        path: path.resolve(__dirname, "dist"),
+        // path: path.resolve(__dirname, "dist"),
+        // 开发模式没有输出
+        path: undefined,
         //入口文件打包输出文件名
         filename: "static/js/main.js",
         //自动清空上次打包的内容
         //原理: 在打包前，将path整个目录内容清空，再进行打包
-        clean: true
+        // clean: true
     },
     //加载器
     module: {
@@ -92,11 +94,11 @@ module.exports = {
         //plugin的配置
         new ESLintPlugin({
             //检测哪些文件
-            context: path.resolve(__dirname, "src"),
+            context: path.resolve(__dirname, "../src"),
         }),
         new HtmlWebpackPlugin({
             //新的html文件特点：1. 结构和原来一致 2. 自动引入打包输出的资源
-            template: path.resolve(__dirname, "public/index.html"),
+            template: path.resolve(__dirname, "../public/index.html"),
         }),
     ],
     //开发服务器: 不会输出资源，在内存中编译打包
